@@ -1,6 +1,3 @@
-// This is your Prisma schema file,
-// learn more about it in the docs: https://pris.ly/d/prisma-schema
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -8,4 +5,91 @@ generator client {
 datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
+}
+
+model User {
+  id          Int     @id @default(autoincrement())
+  email       String  @unique
+  password    String
+  salt        String
+  token       String
+  isValidated Boolean @default(false)
+}
+
+model Ad {
+  id                       Int     @id @default(autoincrement())
+  title                    String
+  description              String
+  type                     String
+  propertyType             String
+  propertySubType          String
+  availability             String
+  address                  String
+  photos                   Photo[]
+  cadastralIncome          String
+  isInvestment             Boolean
+  isNew                    Boolean
+  facadeCount              Int
+  floorArea                Int
+  floorCount               Int
+  buildYear                Int
+  propertyState            String
+  hasGasWaterElectricity   Boolean
+  hasSewerConnection       Boolean
+  bedroomsCount            Int
+  roomCount                Int
+  bathroomCount            Int
+  showerroomCount          Int
+  toiletCount              Int
+  kitchenCount             Int
+  hasLivingroom            Boolean
+  livingroomArea           Int
+  hasDiningroom            Boolean
+  diningroomArea           Int
+  hasCellar                Boolean
+  cellaArea                Int
+  hasLaudryroom            Boolean
+  laudryroomArea           Int
+  hasAttic                 Boolean
+  atticArea                Int
+  hasOffice                Boolean
+  officeArea               Int
+  hasWorkspace             Boolean
+  workspaceArea            Int
+  landArea                 Int
+  isLandFacingStreet       Boolean
+  isLandFlat               Boolean
+  isLandRear               Boolean
+  isLandWooded             Boolean
+  hasGarden                Boolean
+  gardenArea               Int
+  hasTerrace               Boolean
+  terraceArea              Int
+  hasPool                  Boolean
+  poolArea                 Int
+  heatingType              String
+  hasHeatPump              Boolean
+  hasPhotovoltaicPanels    Boolean
+  hasSolarPanels           Boolean
+  hasDoubleGlazing         Boolean
+  hasWaterHeater           Boolean
+  hasAirConditioning       Boolean
+  pebScore                 String
+  pebReportInt             String
+  pebEnergyConsumption     String
+  pebCO2Emission           String
+  pebPrimaryConsumption    String
+  hasPlanningPermission    Boolean
+  isBreachingUrbanPlanning Boolean
+  floodZone                String
+  contactEmail             String
+  contactPhone             String
+  contactMobile            String
+  contactCallingTime       String
+}
+
+model Photo {
+  id   Int @id @default(autoincrement())
+  ad   Ad  @relation(fields: [adId], references: [id])
+  adId Int
 }
