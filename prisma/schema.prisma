@@ -18,74 +18,74 @@ model User {
 
 model Ad {
   id                       Int     @id @default(autoincrement())
-  title                    String
-  description              String
-  type                     String
-  propertyType             String
-  propertySubType          String
-  availability             String
-  address                  String
+  title                    String?
+  description              String?
+  type                     String?
+  propertyType             String?
+  propertySubType          String?
+  availability             String?
+  address                  String?
   photos                   Photo[]
-  cadastralIncome          String
-  isInvestment             Boolean
-  isNew                    Boolean
-  facadeCount              Int
-  floorArea                Int
-  floorCount               Int
-  buildYear                Int
-  propertyState            String
-  hasGasWaterElectricity   Boolean
-  hasSewerConnection       Boolean
-  bedroomsCount            Int
-  roomCount                Int
-  bathroomCount            Int
-  showerroomCount          Int
-  toiletCount              Int
-  kitchenCount             Int
-  hasLivingroom            Boolean
-  livingroomArea           Int
-  hasDiningroom            Boolean
-  diningroomArea           Int
-  hasCellar                Boolean
-  cellaArea                Int
-  hasLaudryroom            Boolean
-  laudryroomArea           Int
-  hasAttic                 Boolean
-  atticArea                Int
-  hasOffice                Boolean
-  officeArea               Int
-  hasWorkspace             Boolean
-  workspaceArea            Int
-  landArea                 Int
-  isLandFacingStreet       Boolean
-  isLandFlat               Boolean
-  isLandRear               Boolean
-  isLandWooded             Boolean
-  hasGarden                Boolean
-  gardenArea               Int
-  hasTerrace               Boolean
-  terraceArea              Int
-  hasPool                  Boolean
-  poolArea                 Int
-  heatingType              String
-  hasHeatPump              Boolean
-  hasPhotovoltaicPanels    Boolean
-  hasSolarPanels           Boolean
-  hasDoubleGlazing         Boolean
-  hasWaterHeater           Boolean
-  hasAirConditioning       Boolean
-  pebScore                 String
-  pebReportInt             String
-  pebEnergyConsumption     String
-  pebCO2Emission           String
-  pebPrimaryConsumption    String
-  hasPlanningPermission    Boolean
-  isBreachingUrbanPlanning Boolean
-  floodZone                String
-  contactEmail             String
-  contactPhone             String
-  contactMobile            String
-  contactCallingTime       String
+  cadastralIncome          String?
+  isInvestment             Boolean @default(false)
+  isNew                    Boolean @default(false)
+  facadeCount              Int?
+  floorArea                Int?
+  floorCount               Int?
+  buildYear                Int?
+  propertyState            String?
+  hasGasWaterElectricity   Boolean @default(false)
+  hasSewerConnection       Boolean @default(false)
+  bedroomsCount            Int?
+  roomCount                Int?
+  bathroomCount            Int?
+  showerroomCount          Int?
+  toiletCount              Int?
+  kitchenCount             Int?
+  hasLivingroom            Boolean @default(false)
+  livingroomArea           Int?
+  hasDiningroom            Boolean @default(false)
+  diningroomArea           Int?
+  hasCellar                Boolean @default(false)
+  cellaArea                Int?
+  hasLaudryroom            Boolean @default(false)
+  laudryroomArea           Int?
+  hasAttic                 Boolean @default(false)
+  atticArea                Int?
+  hasOffice                Boolean @default(false)
+  officeArea               Int?
+  hasWorkspace             Boolean @default(false)
+  workspaceArea            Int?
+  landArea                 Int?
+  isLandFacingStreet       Boolean @default(false)
+  isLandFlat               Boolean @default(false)
+  isLandRear               Boolean @default(false)
+  isLandWooded             Boolean @default(false)
+  hasGarden                Boolean @default(false)
+  gardenArea               Int?
+  hasTerrace               Boolean @default(false)
+  terraceArea              Int?
+  hasPool                  Boolean @default(false)
+  poolArea                 Int?
+  heatingType              String?
+  hasHeatPump              Boolean @default(false)
+  hasPhotovoltaicPanels    Boolean @default(false)
+  hasSolarPanels           Boolean @default(false)
+  hasDoubleGlazing         Boolean @default(false)
+  hasWaterHeater           Boolean @default(false)
+  hasAirConditioning       Boolean @default(false)
+  pebScore                 String?
+  pebReportNumber          String?
+  pebEnergyConsumption     String?
+  pebCO2Emission           String?
+  pebPrimaryConsumption    String?
+  hasPlanningPermission    Boolean @default(false)
+  isBreachingUrbanPlanning Boolean @default(false)
+  floodZone                String?
+  contactEmail             String?
+  contactPhone             String?
+  contactMobile            String?
+  contactCallingTime       String?
 }
 
 model Photo {

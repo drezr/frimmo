@@ -1,84 +1,127 @@
 <template>
   <div>CREATEAD</div>
 
-  <div>
-    <label>Email</label>
-    <input name="email" id="email" type="email" />
-  </div>
+  <div v-for="field in fields">
+    <div v-if="field.type == 'text'">
+      <label class="block" :for="field.title">{{ field.title }}</label>
 
-  <div>
-    <label>Password</label>
-    <input name="password" id="password" type="password" />
+      <input
+        :name="field.title"
+        :id="field.title"
+        :type="field.type"
+        v-model="field.value"
+      />
+      {{ field.value }}
+    </div>
+
+    <div v-if="field.type == 'number'">
+      <label class="block" :for="field.title">{{ field.title }}</label>
+
+      <input
+        :name="field.title"
+        :id="field.title"
+        :type="field.type"
+        v-model="field.value"
+      />
+      {{ field.value }}
+    </div>
+
+    <div v-if="field.type == 'textarea'">
+      <label class="block" :for="field.title">{{ field.title }}</label>
+
+      <textarea
+        :name="field.title"
+        :id="field.title"
+        :type="field.type"
+        v-model="field.value"
+      ></textarea>
+      {{ field.value }}
+    </div>
+
+    <div v-if="field.type == 'checkbox'">
+      <input
+        :name="field.title"
+        :id="field.title"
+        :type="field.type"
+        v-model="field.value"
+      />
+
+      <label :for="field.title">{{ field.title }}</label>
+
+      {{ field.value }}
+    </div>
   </div>
 </template>
 
 <script setup lang="ts">
-const title = ref<string>()
-const description = ref<string>()
-const type = ref<string>()
-const propertyType = ref<string>()
-const propertySubType = ref<string>()
-const availability = ref<string>()
-const address = ref<string>()
-const photos = ref<[]>()
-const cadastralIncome = ref<string>()
-const isInvestment = ref<boolean>()
-const isNew = ref<boolean>()
-const facadeCount = ref<number>()
-const floorArea = ref<number>()
-const floorCount = ref<number>()
-const buildYear = ref<number>()
-const propertyState = ref<string>()
-const hasGasWaterElectricity = ref<boolean>()
-const hasSewerConnection = ref<boolean>()
-const bedroomsCount = ref<number>()
-const roomCount = ref<number>()
-const bathroomCount = ref<number>()
-const showerroomCount = ref<number>()
-const toiletCount = ref<number>()
-const kitchenCount = ref<number>()
-const hasLivingroom = ref<boolean>()
-const livingroomArea = ref<number>()
-const hasDiningroom = ref<boolean>()
-const diningroomArea = ref<number>()
-const hasCellar = ref<boolean>()
-const cellaArea = ref<number>()
-const hasLaudryroom = ref<boolean>()
-const laudryroomArea = ref<number>()
-const hasAttic = ref<boolean>()
-const atticArea = ref<number>()
-const hasOffice = ref<boolean>()
-const officeArea = ref<number>()
-const hasWorkspace = ref<boolean>()
-const workspaceArea = ref<number>()
-const landArea = ref<number>()
-const isLandFacingStreet = ref<boolean>()
-const isLandFlat = ref<boolean>()
-const isLandRear = ref<boolean>()
-const isLandWooded = ref<boolean>()
-const hasGarden = ref<boolean>()
-const gardenArea = ref<number>()
-const hasTerrace = ref<boolean>()
-const terraceArea = ref<number>()
-const hasPool = ref<boolean>()
-const poolArea = ref<number>()
-const heatingType = ref<string>()
-const hasHeatPump = ref<boolean>()
-const hasPhotovoltaicPanels = ref<boolean>()
-const hasSolarPanels = ref<boolean>()
-const hasDoubleGlazing = ref<boolean>()
-const hasWaterHeater = ref<boolean>()
-const hasAirConditioning = ref<boolean>()
-const pebScore = ref<string>()
-const pebReportNumber = ref<string>()
-const pebEnergyConsumption = ref<string>()
-const pebCO2Emission = ref<string>()
-const pebPrimaryConsumption = ref<string>()
-const hasPlanningPermission = ref<boolean>()
-const isBreachingUrbanPlanning = ref<boolean>()
-const floodZone = ref<string>()
-const contactEmail = ref<string>()
-const contactPhone = ref<string>()
-const contactMobile = ref<string>()
-const contactCallingTime = ref<string>()
+const fields = ref([
+  { title: 'title', type: 'text', value: '' },
+  { title: 'description', type: 'textarea', value: '' },
+  { title: 'type', type: 'text', value: '' },
+  { title: 'propertyType', type: 'text', value: '' },
+  { title: 'propertySubType', type: 'text', value: '' },
+  { title: 'availability', type: 'text', value: '' },
+  { title: 'address', type: 'text', value: '' },
+  { title: 'photos', type: 'text', value: '' },
+  { title: 'cadastralIncome', type: 'text', value: '' },
+  { title: 'isInvestment', type: 'checkbox', value: '' },
+  { title: 'isNew', type: 'checkbox', value: '' },
+  { title: 'facadeCount', type: 'number', value: '' },
+  { title: 'floorArea', type: 'number', value: '' },
+  { title: 'floorCount', type: 'number', value: '' },
+  { title: 'buildYear', type: 'number', value: '' },
+  { title: 'propertyState', type: 'text', value: '' },
+  { title: 'hasGasWaterElectricity', type: 'checkbox', value: '' },
+  { title: 'hasSewerConnection', type: 'checkbox', value: '' },
+  { title: 'bedroomsCount', type: 'number', value: '' },
+  { title: 'roomCount', type: 'number', value: '' },
+  { title: 'bathroomCount', type: 'number', value: '' },
+  { title: 'showerroomCount', type: 'number', value: '' },
+  { title: 'toiletCount', type: 'number', value: '' },
+  { title: 'kitchenCount', type: 'number', value: '' },
+  { title: 'hasLivingroom', type: 'checkbox', value: '' },
+  { title: 'livingroomArea', type: 'number', value: '' },
+  { title: 'hasDiningroom', type: 'checkbox', value: '' },
+  { title: 'diningroomArea', type: 'number', value: '' },
+  { title: 'hasCellar', type: 'checkbox', value: '' },
+  { title: 'cellaArea', type: 'number', value: '' },
+  { title: 'hasLaudryroom', type: 'checkbox', value: '' },
+  { title: 'laudryroomArea', type: 'number', value: '' },
+  { title: 'hasAttic', type: 'checkbox', value: '' },
+  { title: 'atticArea', type: 'number', value: '' },
+  { title: 'hasOffice', type: 'checkbox', value: '' },
+  { title: 'officeArea', type: 'number', value: '' },
+  { title: 'hasWorkspace', type: 'checkbox', value: '' },
+  { title: 'workspaceArea', type: 'number', value: '' },
+  { title: 'landArea', type: 'number', value: '' },
+  { title: 'isLandFacingStreet', type: 'checkbox', value: '' },
+  { title: 'isLandFlat', type: 'checkbox', value: '' },
+  { title: 'isLandRear', type: 'checkbox', value: '' },
+  { title: 'isLandWooded', type: 'checkbox', value: '' },
+  { title: 'hasGarden', type: 'checkbox', value: '' },
+  { title: 'gardenArea', type: 'number', value: '' },
+  { title: 'hasTerrace', type: 'checkbox', value: '' },
+  { title: 'terraceArea', type: 'number', value: '' },
+  { title: 'hasPool', type: 'checkbox', value: '' },
+  { title: 'poolArea', type: 'number', value: '' },
+  { title: 'heatingType', type: 'text', value: '' },
+  { title: 'hasHeatPump', type: 'checkbox', value: '' },
+  { title: 'hasPhotovoltaicPanels', type: 'checkbox', value: '' },
+  { title: 'hasSolarPanels', type: 'checkbox', value: '' },
+  { title: 'hasDoubleGlazing', type: 'checkbox', value: '' },
+  { title: 'hasWaterHeater', type: 'checkbox', value: '' },
+  { title: 'hasAirConditioning', type: 'checkbox', value: '' },
+  { title: 'pebScore', type: 'text', value: '' },
+  { title: 'pebReportNumber', type: 'text', value: '' },
+  { title: 'pebEnergyConsumption', type: 'text', value: '' },
+  { title: 'pebCO2Emission', type: 'text', value: '' },
+  { title: 'pebPrimaryConsumption', type: 'text', value: '' },
+  { title: 'hasPlanningPermission', type: 'checkbox', value: '' },
+  { title: 'isBreachingUrbanPlanning', type: 'checkbox', value: '' },
+  { title: 'floodZone', type: 'text', value: '' },
+  { title: 'contactEmail', type: 'text', value: '' },
+  { title: 'contactPhone', type: 'text', value: '' },
+  { title: 'contactMobile', type: 'text', value: '' },
+  { title: 'contactCallingTime', type: 'text', value: '' },
+])
 </script>
