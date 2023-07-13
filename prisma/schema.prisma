@@ -26,6 +26,7 @@ model Ad {
   availability             String?
   address                  String?
   photos                   Photo[]
+  price                    Int?
   cadastralIncome          String?
   isInvestment             Boolean @default(false)
   isNew                    Boolean @default(false)
@@ -36,12 +37,14 @@ model Ad {
   propertyState            String?
   hasGasWaterElectricity   Boolean @default(false)
   hasSewerConnection       Boolean @default(false)
-  bedroomsCount            Int?
+  bedroomCount             Int?
+  bedroomAreas             String?
   roomCount                Int?
   bathroomCount            Int?
   showerroomCount          Int?
   toiletCount              Int?
-  kitchenCount             Int?
+  hasKitchen               Boolean @default(false)
+  kitchenArea              Int?
   hasLivingroom            Boolean @default(false)
   livingroomArea           Int?
   hasDiningroom            Boolean @default(false)

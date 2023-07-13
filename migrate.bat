@@ -9,5 +9,4 @@ call npx prisma generate
 
 call npx @kalissaac/prisma-typegen .\types\generated.ts .\prisma\schema.prisma
 
-powershell -command "(Get-Content .\types\generated.ts) -Replace 'export ', '' | Set-Content .\types\index.ts"
-powershell -command "Get-Content .\types\generated.ts | Select-Object -Skip 6 | Out-File .\types\index.ts"
+powershell -command "(Get-Content .\types\generated.ts) -Replace 'export ', '' | Select-Object -Skip 6 | Set-Content .\types\index.ts"

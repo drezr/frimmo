@@ -4,12 +4,20 @@
       <div><button @click="navigateTo('/')">Frimmo</button></div>
 
       <div>
-        <button @click="navigateTo('/createAd')">Publier une annonce</button>
+        <button @click="navigateTo('/createAd')">
+          {{ _local(['createAdd']) }}
+        </button>
       </div>
 
-      <div v-if="isLogged"><button @click="logout()">Déconnexion</button></div>
+      <div v-if="isLogged">
+        <button @click="logout()">{{ _local(['common', 'signOut']) }}</button>
+      </div>
 
-      <div v-else><button @click="navigateTo('/login')">Connexion</button></div>
+      <div v-else>
+        <button @click="navigateTo('/login')">
+          {{ _local(['common', 'signIn']) }}
+        </button>
+      </div>
     </div>
     <slot />
   </div>

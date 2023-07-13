@@ -1,9 +1,11 @@
 <template>
   <div>CREATEAD</div>
 
-  <div v-for="field in fields">
+  <div v-for="field in fields" class="mb-3">
     <div v-if="field.type == 'text'">
-      <label class="block" :for="field.title">{{ field.title }}</label>
+      <label class="block" :for="field.title">
+        {{ _local(['ad', field.title]) }}
+      </label>
 
       <input
         :name="field.title"
@@ -11,11 +13,12 @@
         :type="field.type"
         v-model="field.value"
       />
-      {{ field.value }}
     </div>
 
     <div v-if="field.type == 'number'">
-      <label class="block" :for="field.title">{{ field.title }}</label>
+      <label class="block" :for="field.title">
+        {{ _local(['ad', field.title]) }}
+      </label>
 
       <input
         :name="field.title"
@@ -23,11 +26,12 @@
         :type="field.type"
         v-model="field.value"
       />
-      {{ field.value }}
     </div>
 
     <div v-if="field.type == 'textarea'">
-      <label class="block" :for="field.title">{{ field.title }}</label>
+      <label class="block" :for="field.title">
+        {{ _local(['ad', field.title]) }}
+      </label>
 
       <textarea
         :name="field.title"
@@ -35,7 +39,6 @@
         :type="field.type"
         v-model="field.value"
       ></textarea>
-      {{ field.value }}
     </div>
 
     <div v-if="field.type == 'checkbox'">
@@ -44,11 +47,12 @@
         :id="field.title"
         :type="field.type"
         v-model="field.value"
+        class="mr-2"
       />
 
-      <label :for="field.title">{{ field.title }}</label>
-
-      {{ field.value }}
+      <label :for="field.title">
+        {{ _local(['ad', field.title]) }}
+      </label>
     </div>
   </div>
 </template>
@@ -63,6 +67,7 @@ const fields = ref([
   { title: 'availability', type: 'text', value: '' },
   { title: 'address', type: 'text', value: '' },
   { title: 'photos', type: 'text', value: '' },
+  { title: 'price', type: 'number', value: '' },
   { title: 'cadastralIncome', type: 'text', value: '' },
   { title: 'isInvestment', type: 'checkbox', value: '' },
   { title: 'isNew', type: 'checkbox', value: '' },
@@ -73,12 +78,13 @@ const fields = ref([
   { title: 'propertyState', type: 'text', value: '' },
   { title: 'hasGasWaterElectricity', type: 'checkbox', value: '' },
   { title: 'hasSewerConnection', type: 'checkbox', value: '' },
-  { title: 'bedroomsCount', type: 'number', value: '' },
+  { title: 'bedroomCount', type: 'number', value: '' },
   { title: 'roomCount', type: 'number', value: '' },
   { title: 'bathroomCount', type: 'number', value: '' },
   { title: 'showerroomCount', type: 'number', value: '' },
   { title: 'toiletCount', type: 'number', value: '' },
-  { title: 'kitchenCount', type: 'number', value: '' },
+  { title: 'hasKitchen', type: 'checkbox', value: '' },
+  { title: 'kitchenArea', type: 'number', value: '' },
   { title: 'hasLivingroom', type: 'checkbox', value: '' },
   { title: 'livingroomArea', type: 'number', value: '' },
   { title: 'hasDiningroom', type: 'checkbox', value: '' },
