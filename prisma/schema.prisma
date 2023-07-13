@@ -18,12 +18,12 @@ model User {
 
 model Ad {
   id                       Int     @id @default(autoincrement())
-  title                    String?
   description              String?
   type                     String?
   propertyType             String?
   propertySubType          String?
   availability             String?
+  availabilityDate         String?
   address                  String?
   photos                   Photo[]
   price                    Int?

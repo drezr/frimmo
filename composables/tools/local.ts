@@ -1,5 +1,5 @@
 const localisation = {
-  createAdd: {
+  createAd: {
     fr: 'Publier une annonce',
     nl: '',
     de: '',
@@ -74,8 +74,32 @@ const localisation = {
     },
   },
   ad: {
-    title: {
-      fr: "Titre de l'annonce",
+    general: {
+      fr: 'Informations générales',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    composition: {
+      fr: 'Composition du bien',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    land: {
+      fr: 'Terrain',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    technical: {
+      fr: 'Aspects techniques',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    contact: {
+      fr: 'Contact',
       nl: '',
       de: '',
       en: '',
@@ -92,8 +116,62 @@ const localisation = {
       de: '',
       en: '',
     },
+    sell: {
+      fr: 'Vendre',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    rent: {
+      fr: 'Louer',
+      nl: '',
+      de: '',
+      en: '',
+    },
     propertyType: {
       fr: 'Type de bien',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    house: {
+      fr: 'Maison',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    apartment: {
+      fr: 'Appartement',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    garage: {
+      fr: 'Garage',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    office: {
+      fr: 'Bureau',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    industry: {
+      fr: 'Industrie',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    commercial: {
+      fr: 'Commerce',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    other: {
+      fr: 'Autre',
       nl: '',
       de: '',
       en: '',
@@ -106,6 +184,12 @@ const localisation = {
     },
     availability: {
       fr: 'Disponibilité',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    availabilityDate: {
+      fr: 'Disponible le',
       nl: '',
       de: '',
       en: '',

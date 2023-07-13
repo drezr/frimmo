@@ -1,11 +1,11 @@
 <template>
-  <div class="bg-gradient-to-b from-slate-200 h-screen">
+  <div class="bg-gradient-to-b from-slate-200 h-screen min-w-fit">
     <div class="border-slate-300 border-b flex justify-between p-3">
-      <div><button @click="navigateTo('/')">Frimmo</button></div>
+      <button @click="navigateTo('/')">Frimmo</button>
 
-      <div>
+      <div v-if="route.name != 'createAd'">
         <button @click="navigateTo('/createAd')">
-          {{ _local(['createAdd']) }}
+          {{ _local(['createAd']) }}
         </button>
       </div>
 
@@ -19,11 +19,14 @@
         </button>
       </div>
     </div>
+
     <slot />
   </div>
 </template>
 
 <script setup lang="ts">
+const route = useRoute()
+
 let isLogged = ref(useCookie('userId'))
 
 function logout() {
