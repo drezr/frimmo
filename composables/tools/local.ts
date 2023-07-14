@@ -5,6 +5,7 @@ const localisation = {
     de: '',
     en: '',
   },
+
   common: {
     email: {
       fr: 'Adresse email',
@@ -73,6 +74,7 @@ const localisation = {
       en: '',
     },
   },
+
   ad: {
     general: {
       fr: 'Informations générales',
@@ -585,6 +587,7 @@ const localisation = {
       en: '',
     },
   },
+
   errors: {
     emailExist: {
       fr: "L'adresse email que vous avez introduite a déjà été utilisée.",
