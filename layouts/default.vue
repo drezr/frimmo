@@ -1,7 +1,9 @@
 <template>
   <div class="bg-gradient-to-b from-slate-200 h-screen min-w-fit">
     <div class="border-slate-300 border-b flex justify-between p-3">
-      <button @click="navigateTo('/')">Frimmo</button>
+      <button @click="navigateTo('/')">
+        <img src="/frimmo_logo_sm.png" />
+      </button>
 
       <div v-if="route.name != 'createAd'">
         <button @click="navigateTo('/createAd')">

@@ -49,6 +49,24 @@ const localisation = {
       de: '',
       en: '',
     },
+    next: {
+      fr: 'Suivant',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    previous: {
+      fr: 'Précédent',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    done: {
+      fr: 'Terminé',
+      nl: '',
+      de: '',
+      en: '',
+    },
     optional: {
       fr: 'Facultatif',
       nl: '',
@@ -69,6 +87,12 @@ const localisation = {
     },
     validated: {
       fr: 'Validé',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    selectAnOption: {
+      fr: 'Sélectionnez une proposition',
       nl: '',
       de: '',
       en: '',
@@ -186,6 +210,24 @@ const localisation = {
     },
     availability: {
       fr: 'Disponibilité',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    onTheDate: {
+      fr: 'À partir de',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    immediately: {
+      fr: 'Immédiatement',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    toBeDefined: {
+      fr: 'À définir',
       nl: '',
       de: '',
       en: '',
@@ -436,6 +478,12 @@ const localisation = {
       de: '',
       en: '',
     },
+    exteriors: {
+      fr: 'Extérieurs',
+      nl: '',
+      de: '',
+      en: '',
+    },
     hasGarden: {
       fr: 'Jardin',
       nl: '',
@@ -468,6 +516,12 @@ const localisation = {
     },
     poolArea: {
       fr: 'Surface de la piscine',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    equipment: {
+      fr: 'Équipement',
       nl: '',
       de: '',
       en: '',
@@ -510,6 +564,12 @@ const localisation = {
     },
     hasAirConditioning: {
       fr: 'Climatisation',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    pebCertificate: {
+      fr: 'Certificat énergétique',
       nl: '',
       de: '',
       en: '',
@@ -563,19 +623,19 @@ const localisation = {
       en: '',
     },
     contactEmail: {
-      fr: 'Email',
+      fr: 'Adresse email',
       nl: '',
       de: '',
       en: '',
     },
     contactPhone: {
-      fr: 'Numéro de téléphone',
+      fr: 'Numéro de téléphone fixe',
       nl: '',
       de: '',
       en: '',
     },
     contactMobile: {
-      fr: 'GSM',
+      fr: 'Numéro de GSM',
       nl: '',
       de: '',
       en: '',
