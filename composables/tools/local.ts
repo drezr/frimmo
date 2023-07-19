@@ -304,6 +304,48 @@ const localisation = {
       de: '',
       en: '',
     },
+    notDefined: {
+      fr: 'Non défini',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    good: {
+      fr: 'Bon',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    asNew: {
+      fr: 'Excellent état',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    toRestore: {
+      fr: 'À restaurer',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    renovated: {
+      fr: 'Fraîchement rénové',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    toRefurbish: {
+      fr: 'À rafraichir',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    toRenovate: {
+      fr: 'À rénover',
+      nl: '',
+      de: '',
+      en: '',
+    },
     hasGasWaterElectricity: {
       fr: 'Eau / gaz / électricité',
       nl: '',

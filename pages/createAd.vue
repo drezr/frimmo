@@ -30,12 +30,16 @@
                 getHideCondition(
                   category,
                   field.hideConditionTitle,
-                  field.hideConditionValue,
+                  field.hideConditionValue
                 ))
             "
           >
             <label class="block" :for="field.title">
               {{ _local(['ad', field.title]) }}
+
+              <span v-if="!field.required" class="text-sm text-gray-500">
+                ({{ _local(['common', 'optional']) }})
+              </span>
             </label>
 
             <select
@@ -61,12 +65,16 @@
                 getHideCondition(
                   category,
                   field.hideConditionTitle,
-                  field.hideConditionValue,
+                  field.hideConditionValue
                 ))
             "
           >
             <label class="block" :for="field.title">
               {{ _local(['ad', field.title]) }}
+
+              <span v-if="!field.required" class="text-sm text-gray-500">
+                ({{ _local(['common', 'optional']) }})
+              </span>
             </label>
 
             <input
@@ -85,12 +93,16 @@
                 getHideCondition(
                   category,
                   field.hideConditionTitle,
-                  field.hideConditionValue,
+                  field.hideConditionValue
                 ))
             "
           >
             <label class="block" :for="field.title">
               {{ _local(['ad', field.title]) }}
+
+              <span v-if="!field.required" class="text-sm text-gray-500">
+                ({{ _local(['common', 'optional']) }})
+              </span>
             </label>
 
             <input
@@ -109,12 +121,16 @@
                 getHideCondition(
                   category,
                   field.hideConditionTitle,
-                  field.hideConditionValue,
+                  field.hideConditionValue
                 ))
             "
           >
             <label class="block" :for="field.title">
               {{ _local(['ad', field.title]) }}
+
+              <span v-if="!field.required" class="text-sm text-gray-500">
+                ({{ _local(['common', 'optional']) }})
+              </span>
             </label>
 
             <textarea
@@ -134,7 +150,7 @@
                 getHideCondition(
                   category,
                   field.hideConditionTitle,
-                  field.hideConditionValue,
+                  field.hideConditionValue
                 ))
             "
           >
@@ -148,6 +164,10 @@
 
             <label :for="field.title">
               {{ _local(['ad', field.title]) }}
+
+              <span v-if="!field.required" class="text-sm text-gray-500">
+                ({{ _local(['common', 'optional']) }})
+              </span>
             </label>
           </div>
 
@@ -156,6 +176,19 @@
               {{ _local(['ad', field.title]) }}
             </div>
           </div>
+
+          <div
+            v-if="
+              field.type == 'spacer' &&
+              (!field.isHidden ||
+                getHideCondition(
+                  category,
+                  field.hideConditionTitle,
+                  field.hideConditionValue
+                ))
+            "
+            class="w-100 h-2"
+          ></div>
         </div>
 
         <div class="flex justify-between mt-10 mb-14">
@@ -205,10 +238,10 @@ const categories = ref(createAdFields)
 function getHideCondition(
   category: any,
   hideConditionTitle: any,
-  hideConditionValue: any,
+  hideConditionValue: any
 ) {
   const hideConditionField = category.fields.find(
-    (f: any) => f.title == hideConditionTitle,
+    (f: any) => f.title == hideConditionTitle
   )
 
   return hideConditionField?.value == hideConditionValue
