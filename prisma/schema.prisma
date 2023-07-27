@@ -27,6 +27,8 @@ model Ad {
   address                  String?
   photos                   Photo[]
   price                    Int?
+  monthlyPrice             Int?
+  monthlyCharges           Int?
   cadastralIncome          String?
   isInvestment             Boolean @default(false)
   isNew                    Boolean @default(false)
@@ -66,10 +68,13 @@ model Ad {
   isLandWooded             Boolean @default(false)
   hasGarden                Boolean @default(false)
   gardenArea               Int?
+  gardenOrientation        String?
   hasTerrace               Boolean @default(false)
   terraceArea              Int?
+  terraceOrientation       String?
   hasPool                  Boolean @default(false)
   poolArea                 Int?
+  poolOrientation          String?
   heatingType              String?
   hasHeatPump              Boolean @default(false)
   hasPhotovoltaicPanels    Boolean @default(false)

@@ -22,7 +22,7 @@
   <form>
     <div v-for="(category, i) in categories" class="flex justify-center">
       <div v-if="category.name == selectedCategory">
-        <div v-for="(field, i) in category.fields" class="mb-3">
+        <div v-for="(field, i) in category.fields" class="mb-5">
           <div
             v-if="
               field.type == 'select' &&
@@ -34,10 +34,16 @@
                 ))
             "
           >
-            <label class="block" :for="field.title">
+            <label
+              class="block mb-1 font-bold text-gray-700"
+              :for="field.title"
+            >
               {{ _local(['ad', field.title]) }}
 
-              <span v-if="!field.required" class="text-sm text-gray-500">
+              <span
+                v-if="!field.required"
+                class="text-sm text-gray-500 font-normal"
+              >
                 ({{ _local(['common', 'optional']) }})
               </span>
             </label>
@@ -69,10 +75,16 @@
                 ))
             "
           >
-            <label class="block" :for="field.title">
+            <label
+              class="block mb-1 font-bold text-gray-700"
+              :for="field.title"
+            >
               {{ _local(['ad', field.title]) }}
 
-              <span v-if="!field.required" class="text-sm text-gray-500">
+              <span
+                v-if="!field.required"
+                class="text-sm text-gray-500 font-normal"
+              >
                 ({{ _local(['common', 'optional']) }})
               </span>
             </label>
@@ -106,24 +118,34 @@
                 ))
             "
           >
-            <label class="block" :for="field.title">
+            <label
+              class="block mb-1 font-bold text-gray-700"
+              :for="field.title"
+            >
               {{ _local(['ad', field.title]) }}
 
-              <span v-if="!field.required" class="text-sm text-gray-500">
+              <span
+                v-if="!field.required"
+                class="text-sm text-gray-500 font-normal"
+              >
                 ({{ _local(['common', 'optional']) }})
               </span>
             </label>
 
             <div class="flex items-center w-96">
-              <div
+              <button
                 v-if="field.slider"
-                class="border border-gray-400 rounded px-3 py-2 mr-2 cursor-pointer"
-                @click="addToField(field, -1)"
+                class="border border-gray-500 bg-white hover:bg-gray-100 rounded px-3 py-2 mr-2 cursor-pointer"
+                @click.prevent="addToField(field, -1)"
+                :class="[
+                  { 'pointer-events-none': !field.value },
+                  { 'bg-gray-200': !field.value },
+                ]"
               >
                 <ClientOnly>
-                  <icon icon="minus" size="lg" />
+                  <icon icon="minus" size="xl" />
                 </ClientOnly>
-              </div>
+              </button>
 
               <input
                 :name="field.title"
@@ -135,24 +157,26 @@
                   { 'text-center': field.slider },
                   { 'input-no-arrow-wk': field.slider },
                   { 'input-no-arrow-moz': field.slider },
+                  { 'bg-gray-100': field.slider },
                 ]"
+                :disabled="field.slider"
               />
 
-              <div
+              <button
                 v-if="field.slider"
-                class="border border-gray-400 rounded px-3 py-2 ml-2 cursor-pointer"
-                @click="addToField(field, 1)"
+                class="border border-gray-500 bg-white hover:bg-gray-100 rounded px-3 py-2 ml-2 cursor-pointer"
+                @click.prevent="addToField(field, 1)"
               >
                 <ClientOnly>
-                  <icon icon="plus" size="lg" />
+                  <icon icon="plus" size="xl" />
                 </ClientOnly>
-              </div>
+              </button>
 
               <div
                 v-if="field.unit"
                 class="ml-3 border border-gray-400 rounded px-3 py-2"
               >
-                {{ field.unit }}
+                {{ _local(['ad', field.unit]) }}
               </div>
             </div>
           </div>
@@ -168,10 +192,16 @@
                 ))
             "
           >
-            <label class="block" :for="field.title">
+            <label
+              class="block mb-1 font-bold text-gray-700"
+              :for="field.title"
+            >
               {{ _local(['ad', field.title]) }}
 
-              <span v-if="!field.required" class="text-sm text-gray-500">
+              <span
+                v-if="!field.required"
+                class="text-sm text-gray-500 font-normal"
+              >
                 ({{ _local(['common', 'optional']) }})
               </span>
             </label>
@@ -209,7 +239,10 @@
             <label :for="field.title" class="cursor-pointer">
               {{ _local(['ad', field.title]) }}
 
-              <span v-if="!field.required" class="text-sm text-gray-500">
+              <span
+                v-if="!field.required"
+                class="text-sm text-gray-500 font-normal"
+              >
                 ({{ _local(['common', 'optional']) }})
               </span>
             </label>
@@ -231,7 +264,7 @@
                   field.hideConditionValue,
                 ))
             "
-            class="w-100 h-2"
+            class="w-100 h-1"
           ></div>
         </div>
 
@@ -239,22 +272,37 @@
           <div v-if="i == 0"></div>
 
           <div
-            class="cursor-pointer"
+            class="cursor-pointer border border-gray-500 bg-white hover:bg-gray-100 rounded px-3 py-2"
             v-if="i > 0"
             @click="selectedCategory = navigateToCategory(-1)"
           >
+            <ClientOnly>
+              <icon icon="chevron-left" size="lg" class="mr-3" />
+            </ClientOnly>
+
             {{ _local(['common', 'previous']) }}
           </div>
 
           <div
-            class="cursor-pointer"
+            class="cursor-pointer border border-gray-500 bg-white hover:bg-gray-100 rounded px-3 py-2"
             v-if="i < categories.length - 1"
             @click="selectedCategory = navigateToCategory(1)"
           >
             {{ _local(['common', 'next']) }}
+
+            <ClientOnly>
+              <icon icon="chevron-right" size="lg" class="ml-3" />
+            </ClientOnly>
           </div>
 
-          <div class="cursor-pointer" v-if="i == categories.length - 1">
+          <div
+            class="cursor-pointer border bg-blue-600 hover:bg-blue-500 text-white rounded px-3 py-2"
+            v-if="i == categories.length - 1"
+          >
+            <ClientOnly>
+              <icon icon="check" size="lg" class="mr-3" />
+            </ClientOnly>
+
             {{ _local(['common', 'done']) }}
           </div>
         </div>
@@ -291,11 +339,11 @@ function navigateToCategory(direction: number) {
 }
 
 function addToField(field: any, value: number) {
-  if (!field.value) {
+  field.value += value
+
+  if (field.value < 0) {
     field.value = 0
   }
-
-  field.value += value
 }
 </script>
 

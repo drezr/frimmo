@@ -66,7 +66,34 @@
         "value": "",
         "required": false,
         "options": [],
-        "unit":"€"
+        "unit":"€",
+        "isHidden": true,
+        "hideConditionTitle": "type",
+        "hideConditionValue": "sell"
+      },
+      {
+        "title": "monthlyPrice",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":"€",
+        "isHidden": true,
+        "hideConditionTitle": "type",
+        "hideConditionValue": "rent"
+      },
+      {
+        "title": "monthlyCharges",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":"€",
+        "isHidden": true,
+        "hideConditionTitle": "type",
+        "hideConditionValue": "rent"
       },
       {
         "title": "cadastralIncome",
@@ -228,19 +255,19 @@
         "unit":""
       },
       {
-        "title": "bedroomCount",
+        "title": "roomCount",
         "type": "number",
-        "slider": false,
-        "value": "",
+        "slider": true,
+        "value": 0,
         "required": false,
         "options": [],
         "unit":""
       },
       {
-        "title": "roomCount",
+        "title": "bedroomCount",
         "type": "number",
-        "slider": false,
-        "value": "",
+        "slider": true,
+        "value": 0,
         "required": false,
         "options": [],
         "unit":""
@@ -248,8 +275,8 @@
       {
         "title": "bathroomCount",
         "type": "number",
-        "slider": false,
-        "value": "",
+        "slider": true,
+        "value": 0,
         "required": false,
         "options": [],
         "unit":""
@@ -257,8 +284,8 @@
       {
         "title": "showerroomCount",
         "type": "number",
-        "slider": false,
-        "value": "",
+        "slider": true,
+        "value": 0,
         "required": false,
         "options": [],
         "unit":""
@@ -266,8 +293,8 @@
       {
         "title": "toiletCount",
         "type": "number",
-        "slider": false,
-        "value": "",
+        "slider": true,
+        "value": 0,
         "required": false,
         "options": [],
         "unit":""
@@ -288,7 +315,7 @@
         "value": "",
         "required": false,
         "options": [],
-        "unit":"m²"
+        "unit":"squareMeter"
       },
       {
         "title": "hasKitchen",
@@ -309,7 +336,7 @@
         "hideConditionTitle": "hasKitchen",
         "hideConditionValue": true,
         "options": [],
-        "unit":"m²"
+        "unit":"squareMeter"
       },
       {
         "title": "",
@@ -342,7 +369,7 @@
         "hideConditionTitle": "hasLivingroom",
         "hideConditionValue": true,
         "options": [],
-        "unit":"m²"
+        "unit":"squareMeter"
       },
       {
         "title": "",
@@ -375,7 +402,7 @@
         "hideConditionTitle": "hasDiningroom",
         "hideConditionValue": true,
         "options": [],
-        "unit":"m²"
+        "unit":"squareMeter"
       },
       {
         "title": "",
@@ -408,7 +435,7 @@
         "hideConditionTitle": "hasCellar",
         "hideConditionValue": true,
         "options": [],
-        "unit":"m²"
+        "unit":"squareMeter"
       },
       {
         "title": "",
@@ -440,7 +467,7 @@
         "hideConditionTitle": "hasLaudryroom",
         "hideConditionValue": true,
         "options": [],
-        "unit":"m²"
+        "unit":"squareMeter"
       },
       {
         "title": "",
@@ -472,7 +499,7 @@
         "hideConditionTitle": "hasAttic",
         "hideConditionValue": true,
         "options": [],
-        "unit":"m²"
+        "unit":"squareMeter"
       },
       {
         "title": "",
@@ -504,7 +531,7 @@
         "hideConditionTitle": "hasOffice",
         "hideConditionValue": true,
         "options": [],
-        "unit":"m²"
+        "unit":"squareMeter"
       },
       {
         "title": "",
@@ -537,7 +564,7 @@
         "hideConditionTitle": "hasWorkspace",
         "hideConditionValue": true,
         "options": [],
-        "unit":"m²"
+        "unit":"squareMeter"
       },
       {
         "title": "",
@@ -563,7 +590,7 @@
         "value": "",
         "required": false,
         "options": [],
-        "unit":"m²"
+        "unit":"squareMeter"
       },
       {
         "title": "isLandFacingStreet",
@@ -629,7 +656,40 @@
         "hideConditionTitle": "hasGarden",
         "hideConditionValue": true,
         "options": [],
-        "unit":"m²"
+        "unit":"squareMeter"
+      },
+      {
+        "title": "gardenOrientation",
+        "type": "select",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [
+          "north",
+          "northEast",
+          "east",
+          "southEast",
+          "south",
+          "southWest",
+          "west",
+          "northWest"
+        ],
+        "unit":"",
+        "isHidden": true,
+        "hideConditionTitle": "hasGarden",
+        "hideConditionValue": true
+      },
+      {
+        "title": "",
+        "type": "spacer",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":"",
+        "isHidden": true,
+        "hideConditionTitle": "hasGarden",
+        "hideConditionValue": true
       },
       {
         "title": "hasTerrace",
@@ -650,7 +710,40 @@
         "hideConditionTitle": "hasTerrace",
         "hideConditionValue": true,
         "options": [],
-        "unit":"m²"
+        "unit":"squareMeter"
+      },
+      {
+        "title": "terraceOrientation",
+        "type": "select",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [
+          "north",
+          "northEast",
+          "east",
+          "southEast",
+          "south",
+          "southWest",
+          "west",
+          "northWest"
+        ],
+        "unit":"",
+        "isHidden": true,
+        "hideConditionTitle": "hasTerrace",
+        "hideConditionValue": true
+      },
+      {
+        "title": "",
+        "type": "spacer",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":"",
+        "isHidden": true,
+        "hideConditionTitle": "hasTerrace",
+        "hideConditionValue": true
       },
       {
         "title": "hasPool",
@@ -671,7 +764,28 @@
         "hideConditionTitle": "hasPool",
         "hideConditionValue": true,
         "options": [],
-        "unit":"m²"
+        "unit":"squareMeter"
+      },
+      {
+        "title": "poolOrientation",
+        "type": "select",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [
+          "north",
+          "northEast",
+          "east",
+          "southEast",
+          "south",
+          "southWest",
+          "west",
+          "northWest"
+        ],
+        "unit":"",
+        "isHidden": true,
+        "hideConditionTitle": "hasPool",
+        "hideConditionValue": true
       }
     ]
   },

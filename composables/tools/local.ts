@@ -250,6 +250,18 @@ const localisation = {
       de: '',
       en: '',
     },
+    monthlyPrice: {
+      fr: 'Loyer mensuel',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    monthlyCharges: {
+      fr: 'Charges mensuelles',
+      nl: '',
+      de: '',
+      en: '',
+    },
     photos: {
       fr: 'Photos',
       nl: '',
@@ -538,6 +550,12 @@ const localisation = {
       de: '',
       en: '',
     },
+    gardenOrientation: {
+      fr: 'Orientation du jardin',
+      nl: '',
+      de: '',
+      en: '',
+    },
     hasTerrace: {
       fr: 'Terrasse',
       nl: '',
@@ -550,6 +568,12 @@ const localisation = {
       de: '',
       en: '',
     },
+    terraceOrientation: {
+      fr: 'Orientation de la terrasse',
+      nl: '',
+      de: '',
+      en: '',
+    },
     hasPool: {
       fr: 'Piscine',
       nl: '',
@@ -558,6 +582,12 @@ const localisation = {
     },
     poolArea: {
       fr: 'Surface de la piscine',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    poolOrientation: {
+      fr: 'Orientation de la piscine',
       nl: '',
       de: '',
       en: '',
@@ -696,6 +726,60 @@ const localisation = {
     },
     kwhyear: {
       fr: 'kWh/an',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    squareMeter: {
+      fr: 'm²',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    north: {
+      fr: 'Nord',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    northEast: {
+      fr: 'Nord Est',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    east: {
+      fr: 'Est',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    southEast: {
+      fr: 'Sud Est',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    south: {
+      fr: 'Sud',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    southWest: {
+      fr: 'Sud Ouest',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    west: {
+      fr: 'Ouest',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    northWest: {
+      fr: 'Nord Ouest',
       nl: '',
       de: '',
       en: '',
