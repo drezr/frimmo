@@ -30,7 +30,7 @@
                 getHideCondition(
                   category,
                   field.hideConditionTitle,
-                  field.hideConditionValue
+                  field.hideConditionValue,
                 ))
             "
           >
@@ -65,7 +65,7 @@
                 getHideCondition(
                   category,
                   field.hideConditionTitle,
-                  field.hideConditionValue
+                  field.hideConditionValue,
                 ))
             "
           >
@@ -93,7 +93,7 @@
                 getHideCondition(
                   category,
                   field.hideConditionTitle,
-                  field.hideConditionValue
+                  field.hideConditionValue,
                 ))
             "
           >
@@ -121,7 +121,7 @@
                 getHideCondition(
                   category,
                   field.hideConditionTitle,
-                  field.hideConditionValue
+                  field.hideConditionValue,
                 ))
             "
           >
@@ -150,7 +150,7 @@
                 getHideCondition(
                   category,
                   field.hideConditionTitle,
-                  field.hideConditionValue
+                  field.hideConditionValue,
                 ))
             "
           >
@@ -184,7 +184,7 @@
                 getHideCondition(
                   category,
                   field.hideConditionTitle,
-                  field.hideConditionValue
+                  field.hideConditionValue,
                 ))
             "
             class="w-100 h-2"
@@ -220,7 +220,7 @@
 </template>
 
 <script setup lang="ts">
-import createAdFields from '@/misc/createAdFields.json'
+import createAdSkeleton from '@/misc/createAdSkeleton.json'
 
 const selectedCategory = ref('general')
 
@@ -233,15 +233,15 @@ const categoryNames = [
   'contact',
 ]
 
-const categories = ref(createAdFields)
+const categories = ref(createAdSkeleton)
 
 function getHideCondition(
   category: any,
   hideConditionTitle: any,
-  hideConditionValue: any
+  hideConditionValue: any,
 ) {
   const hideConditionField = category.fields.find(
-    (f: any) => f.title == hideConditionTitle
+    (f: any) => f.title == hideConditionTitle,
   )
 
   return hideConditionField?.value == hideConditionValue
