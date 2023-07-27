@@ -96,25 +96,3 @@ model Photo {
   ad   Ad  @relation(fields: [adId], references: [id])
   adId Int
 }
-
-model CreateAdCategory {
-  id     Int             @id @default(autoincrement())
-  name   String
-  fields CreateAdField[]
-}
-
-model CreateAdField {
-  id                 Int              @id @default(autoincrement())
-  title              String?
-  type               String
-  slider             Boolean          @default(false)
-  value              String?
-  required           Boolean          @default(false)
-  options            String?
-  unit               String?
-  isHidden           Boolean          @default(false)
-  hideConditionTitle String?
-  hideConditionValue String?
-  CreateAdCategory   CreateAdCategory @relation(fields: [createAdCategoryId], references: [id])
-  createAdCategoryId Int
-}

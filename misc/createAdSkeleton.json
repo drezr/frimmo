@@ -1,1 +1,886 @@
-[{"id":39,"name":"general","fields":[{"id":395,"title":"type","type":"select","slider":false,"value":null,"required":true,"options":"sell~#~rent","unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":39},{"id":396,"title":"propertyType","type":"select","slider":false,"value":null,"required":true,"options":"house~#~apartment~#~land~#~garage~#~office~#~industry~#~commercial~#~other","unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":39},{"id":397,"title":"availability","type":"select","slider":false,"value":null,"required":false,"options":"onTheDate~#~immediately~#~toBeDefined","unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":39},{"id":398,"title":"availabilityDate","type":"text","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":true,"hideConditionTitle":"availability","hideConditionValue":"onTheDate","createAdCategoryId":39},{"id":399,"title":"address","type":"text","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":39},{"id":400,"title":"price","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":"€","isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":39},{"id":401,"title":"cadastralIncome","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":"€","isHidden":true,"hideConditionTitle":"type","hideConditionValue":"sell","createAdCategoryId":39},{"id":402,"title":null,"type":"spacer","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":39},{"id":403,"title":"isInvestment","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":true,"hideConditionTitle":"type","hideConditionValue":"sell","createAdCategoryId":39},{"id":404,"title":"isNew","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":39},{"id":405,"title":null,"type":"spacer","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":39},{"id":406,"title":"description","type":"textarea","slider":false,"value":null,"required":true,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":39}]},{"id":40,"name":"photos","fields":[{"id":407,"title":"photos","type":"text","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":40}]},{"id":41,"name":"composition","fields":[{"id":408,"title":"facadeCount","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":409,"title":"floorCount","type":"number","slider":true,"value":"1","required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":410,"title":"buildYear","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":411,"title":"propertyState","type":"select","slider":false,"value":null,"required":false,"options":"notDefined~#~good~#~asNew~#~toRestore~#~renovated~#~toRefurbish~#~toRenovate","unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":412,"title":null,"type":"spacer","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":413,"title":"hasGasWaterElectricity","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":414,"title":"hasSewerConnection","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":415,"title":null,"type":"spacer","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":416,"title":"bedroomCount","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":417,"title":"roomCount","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":418,"title":"bathroomCount","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":419,"title":"showerroomCount","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":420,"title":"toiletCount","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":421,"title":null,"type":"spacer","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":422,"title":"floorArea","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":"m²","isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":423,"title":"hasKitchen","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":424,"title":"kitchenArea","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":"m²","isHidden":true,"hideConditionTitle":"hasKitchen","hideConditionValue":"true","createAdCategoryId":41},{"id":425,"title":null,"type":"spacer","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":true,"hideConditionTitle":"hasKitchen","hideConditionValue":"true","createAdCategoryId":41},{"id":426,"title":"hasLivingroom","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":427,"title":"livingroomArea","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":"m²","isHidden":true,"hideConditionTitle":"hasLivingroom","hideConditionValue":"true","createAdCategoryId":41},{"id":428,"title":null,"type":"spacer","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":true,"hideConditionTitle":"hasLivingroom","hideConditionValue":"true","createAdCategoryId":41},{"id":429,"title":"hasDiningroom","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":430,"title":"diningroomArea","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":"m²","isHidden":true,"hideConditionTitle":"hasDiningroom","hideConditionValue":"true","createAdCategoryId":41},{"id":431,"title":null,"type":"spacer","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":true,"hideConditionTitle":"hasDiningroom","hideConditionValue":"true","createAdCategoryId":41},{"id":432,"title":"hasCellar","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":433,"title":"cellaArea","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":"m²","isHidden":true,"hideConditionTitle":"hasCellar","hideConditionValue":"true","createAdCategoryId":41},{"id":434,"title":null,"type":"spacer","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":true,"hideConditionTitle":"hasCellar","hideConditionValue":"true","createAdCategoryId":41},{"id":435,"title":"hasLaudryroom","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":436,"title":"laudryroomArea","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":"m²","isHidden":true,"hideConditionTitle":"hasLaudryroom","hideConditionValue":"true","createAdCategoryId":41},{"id":437,"title":null,"type":"spacer","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":true,"hideConditionTitle":"hasLaudryroom","hideConditionValue":"true","createAdCategoryId":41},{"id":438,"title":"hasAttic","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":439,"title":"atticArea","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":"m²","isHidden":true,"hideConditionTitle":"hasAttic","hideConditionValue":"true","createAdCategoryId":41},{"id":440,"title":null,"type":"spacer","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":true,"hideConditionTitle":"hasAttic","hideConditionValue":"true","createAdCategoryId":41},{"id":441,"title":"hasOffice","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":442,"title":"officeArea","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":"m²","isHidden":true,"hideConditionTitle":"hasOffice","hideConditionValue":"true","createAdCategoryId":41},{"id":443,"title":null,"type":"spacer","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":true,"hideConditionTitle":"hasOffice","hideConditionValue":"true","createAdCategoryId":41},{"id":444,"title":"hasWorkspace","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":41},{"id":445,"title":"workspaceArea","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":"m²","isHidden":true,"hideConditionTitle":"hasWorkspace","hideConditionValue":"true","createAdCategoryId":41},{"id":446,"title":null,"type":"spacer","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":true,"hideConditionTitle":"hasWorkspace","hideConditionValue":"true","createAdCategoryId":41}]},{"id":42,"name":"land","fields":[{"id":447,"title":"landArea","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":"m²","isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":42},{"id":448,"title":"isLandFacingStreet","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":42},{"id":449,"title":"isLandFlat","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":42},{"id":450,"title":"isLandRear","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":42},{"id":451,"title":"isLandWooded","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":42},{"id":452,"title":"exteriors","type":"title","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":42},{"id":453,"title":"hasGarden","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":42},{"id":454,"title":"gardenArea","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":"m²","isHidden":true,"hideConditionTitle":"hasGarden","hideConditionValue":"true","createAdCategoryId":42},{"id":455,"title":"hasTerrace","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":42},{"id":456,"title":"terraceArea","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":"m²","isHidden":true,"hideConditionTitle":"hasTerrace","hideConditionValue":"true","createAdCategoryId":42},{"id":457,"title":"hasPool","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":42},{"id":458,"title":"poolArea","type":"number","slider":false,"value":null,"required":false,"options":null,"unit":"m²","isHidden":true,"hideConditionTitle":"hasPool","hideConditionValue":"true","createAdCategoryId":42}]},{"id":43,"name":"technical","fields":[{"id":459,"title":"equipment","type":"title","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":43},{"id":460,"title":"heatingType","type":"text","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":43},{"id":461,"title":"hasHeatPump","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":43},{"id":462,"title":"hasPhotovoltaicPanels","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":43},{"id":463,"title":"hasSolarPanels","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":43},{"id":464,"title":"hasDoubleGlazing","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":43},{"id":465,"title":"hasWaterHeater","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":43},{"id":466,"title":"hasAirConditioning","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":43},{"id":467,"title":"pebCertificate","type":"title","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":43},{"id":468,"title":"pebScore","type":"select","slider":false,"value":null,"required":false,"options":"A++~#~A+~#~A~#~C~#~D~#~E~#~F~#~G","unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":43},{"id":469,"title":"pebReportNumber","type":"text","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":43},{"id":470,"title":"pebEnergyConsumption","type":"text","slider":false,"value":null,"required":false,"options":null,"unit":"kwhm2","isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":43},{"id":471,"title":"pebCO2Emission","type":"text","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":43},{"id":472,"title":"pebPrimaryConsumption","type":"text","slider":false,"value":null,"required":false,"options":null,"unit":"kwhyear","isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":43},{"id":473,"title":"hasPlanningPermission","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":43},{"id":474,"title":"isBreachingUrbanPlanning","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":43},{"id":475,"title":"floodZone","type":"checkbox","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":43}]},{"id":44,"name":"contact","fields":[{"id":476,"title":"contactEmail","type":"text","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":44},{"id":477,"title":"contactPhone","type":"text","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":44},{"id":478,"title":"contactMobile","type":"text","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":44},{"id":479,"title":"contactCallingTime","type":"text","slider":false,"value":null,"required":false,"options":null,"unit":null,"isHidden":false,"hideConditionTitle":null,"hideConditionValue":null,"createAdCategoryId":44}]}]
+[
+  {
+    "name": "general",
+    "fields": [
+      {
+        "title": "type",
+        "type": "select",
+        "slider": false,
+        "value": "",
+        "required": true,
+        "options": ["sell", "rent"],
+        "unit":""
+      },
+      {
+        "title": "propertyType",
+        "type": "select",
+        "slider": false,
+        "value": "",
+        "required": true,
+        "options": [
+          "house",
+          "apartment",
+          "land",
+          "garage",
+          "office",
+          "industry",
+          "commercial",
+          "other"
+        ],
+        "unit":""
+      },
+      {
+        "title": "availability",
+        "type": "select",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": ["onTheDate", "immediately", "toBeDefined"],
+        "unit":""
+      },
+      {
+        "title": "availabilityDate",
+        "type": "text",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":"",
+        "isHidden": true,
+        "hideConditionTitle": "availability",
+        "hideConditionValue": "onTheDate"
+      },
+      {
+        "title": "address",
+        "type": "text",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "price",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":"€"
+      },
+      {
+        "title": "cadastralIncome",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":"€",
+        "isHidden": true,
+        "hideConditionTitle": "type",
+        "hideConditionValue": "sell"
+      },
+      {
+        "title": "",
+        "type": "spacer",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "isInvestment",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":"",
+        "isHidden": true,
+        "hideConditionTitle": "type",
+        "hideConditionValue": "sell"
+      },
+      {
+        "title": "isNew",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "",
+        "type": "spacer",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "description",
+        "type": "textarea",
+        "slider": false,
+        "value": "",
+        "required": true,
+        "options": [],
+        "unit":""
+      }
+    ]
+  },
+  {
+    "name": "photos",
+    "fields": [
+      {
+        "title": "photos",
+        "type": "text",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      }
+    ]
+  },
+  {
+    "name": "composition",
+    "fields": [
+      {
+        "title": "facadeCount",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "floorCount",
+        "type": "number",
+        "slider": true,
+        "value": 1,
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "buildYear",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "propertyState",
+        "type": "select",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [
+          "notDefined",
+          "good",
+          "asNew",
+          "toRestore",
+          "renovated",
+          "toRefurbish",
+          "toRenovate"
+        ],
+        "unit":""
+      },
+      {
+        "title": "",
+        "type": "spacer",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "hasGasWaterElectricity",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "hasSewerConnection",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "",
+        "type": "spacer",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "bedroomCount",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "roomCount",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "bathroomCount",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "showerroomCount",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "toiletCount",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "",
+        "type": "spacer",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "floorArea",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":"m²"
+      },
+      {
+        "title": "hasKitchen",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "kitchenArea",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasKitchen",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":"m²"
+      },
+      {
+        "title": "",
+        "type": "spacer",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasKitchen",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "hasLivingroom",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "livingroomArea",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasLivingroom",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":"m²"
+      },
+      {
+        "title": "",
+        "type": "spacer",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasLivingroom",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "hasDiningroom",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "diningroomArea",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasDiningroom",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":"m²"
+      },
+      {
+        "title": "",
+        "type": "spacer",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasDiningroom",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "hasCellar",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "cellaArea",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasCellar",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":"m²"
+      },
+      {
+        "title": "",
+        "type": "spacer",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasCellar",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "hasLaudryroom",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "unit":""
+      },
+      {
+        "title": "laudryroomArea",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasLaudryroom",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":"m²"
+      },
+      {
+        "title": "",
+        "type": "spacer",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasLaudryroom",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "hasAttic",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "unit":""
+      },
+      {
+        "title": "atticArea",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasAttic",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":"m²"
+      },
+      {
+        "title": "",
+        "type": "spacer",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasAttic",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "hasOffice",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "unit":""
+      },
+      {
+        "title": "officeArea",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasOffice",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":"m²"
+      },
+      {
+        "title": "",
+        "type": "spacer",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasOffice",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "hasWorkspace",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "workspaceArea",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasWorkspace",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":"m²"
+      },
+      {
+        "title": "",
+        "type": "spacer",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasWorkspace",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":""
+      }
+    ]
+  },
+  {
+    "name": "land",
+    "fields": [
+      {
+        "title": "landArea",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":"m²"
+      },
+      {
+        "title": "isLandFacingStreet",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "isLandFlat",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "isLandRear",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "isLandWooded",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "exteriors",
+        "type": "title",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "hasGarden",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "gardenArea",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasGarden",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":"m²"
+      },
+      {
+        "title": "hasTerrace",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "terraceArea",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasTerrace",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":"m²"
+      },
+      {
+        "title": "hasPool",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "poolArea",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "isHidden": true,
+        "hideConditionTitle": "hasPool",
+        "hideConditionValue": true,
+        "options": [],
+        "unit":"m²"
+      }
+    ]
+  },
+  {
+    "name": "technical",
+    "fields": [
+      {
+        "title": "equipment",
+        "type": "title",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "heatingType",
+        "type": "text",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "hasHeatPump",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "hasPhotovoltaicPanels",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "hasSolarPanels",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "hasDoubleGlazing",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "hasWaterHeater",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "hasAirConditioning",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "pebCertificate",
+        "type": "title",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "pebScore",
+        "type": "select",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [
+          "A++",
+          "A+",
+          "A",
+          "C",
+          "D",
+          "E",
+          "F",
+          "G"
+        ],
+        "unit":""
+      },
+      {
+        "title": "pebReportNumber",
+        "type": "text",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "pebEnergyConsumption",
+        "type": "text",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":"kwhm2"
+      },
+      {
+        "title": "pebCO2Emission",
+        "type": "text",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "pebPrimaryConsumption",
+        "type": "text",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":"kwhyear"
+      },
+      {
+        "title": "hasPlanningPermission",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "isBreachingUrbanPlanning",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "floodZone",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      }
+    ]
+  },
+  {
+    "name": "contact",
+    "fields": [
+      {
+        "title": "contactEmail",
+        "type": "text",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "contactPhone",
+        "type": "text",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "contactMobile",
+        "type": "text",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
+        "title": "contactCallingTime",
+        "type": "text",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      }
+    ]
+  }
+]
