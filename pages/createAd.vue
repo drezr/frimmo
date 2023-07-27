@@ -77,13 +77,22 @@
               </span>
             </label>
 
-            <input
-              :name="field.title"
-              :id="field.title"
-              :type="field.type"
-              v-model="field.value"
-              class="w-96 rounded"
-            />
+            <div class="flex items-center w-96">
+              <input
+                :name="field.title"
+                :id="field.title"
+                :type="field.type"
+                v-model="field.value"
+                class="rounded w-full"
+              />
+
+              <div
+                v-if="field.unit"
+                class="ml-3 border border-gray-400 rounded px-3 py-2"
+              >
+                {{ _local(['ad', field.unit]) }}
+              </div>
+            </div>
           </div>
 
           <div
@@ -105,13 +114,47 @@
               </span>
             </label>
 
-            <input
-              :name="field.title"
-              :id="field.title"
-              :type="field.type"
-              v-model="field.value"
-              class="w-96 rounded"
-            />
+            <div class="flex items-center w-96">
+              <div
+                v-if="field.slider"
+                class="border border-gray-400 rounded px-3 py-2 mr-2 cursor-pointer"
+                @click="addToField(field, -1)"
+              >
+                <ClientOnly>
+                  <icon icon="minus" size="lg" />
+                </ClientOnly>
+              </div>
+
+              <input
+                :name="field.title"
+                :id="field.title"
+                :type="field.type"
+                v-model="field.value"
+                class="rounded w-full"
+                :class="[
+                  { 'text-center': field.slider },
+                  { 'input-no-arrow-wk': field.slider },
+                  { 'input-no-arrow-moz': field.slider },
+                ]"
+              />
+
+              <div
+                v-if="field.slider"
+                class="border border-gray-400 rounded px-3 py-2 ml-2 cursor-pointer"
+                @click="addToField(field, 1)"
+              >
+                <ClientOnly>
+                  <icon icon="plus" size="lg" />
+                </ClientOnly>
+              </div>
+
+              <div
+                v-if="field.unit"
+                class="ml-3 border border-gray-400 rounded px-3 py-2"
+              >
+                {{ field.unit }}
+              </div>
+            </div>
           </div>
 
           <div
@@ -153,16 +196,17 @@
                   field.hideConditionValue,
                 ))
             "
+            class="hover:opacity-80"
           >
             <input
               :name="field.title"
               :id="field.title"
               :type="field.type"
               v-model="field.value"
-              class="mr-2"
+              class="mr-2 cursor-pointer"
             />
 
-            <label :for="field.title">
+            <label :for="field.title" class="cursor-pointer">
               {{ _local(['ad', field.title]) }}
 
               <span v-if="!field.required" class="text-sm text-gray-500">
@@ -224,14 +268,7 @@ import createAdSkeleton from '@/misc/createAdSkeleton.json'
 
 const selectedCategory = ref('general')
 
-const categoryNames = [
-  'general',
-  'photos',
-  'composition',
-  'land',
-  'technical',
-  'contact',
-]
+const categoryNames = createAdSkeleton.map((x) => x.name)
 
 const categories = ref(createAdSkeleton)
 
@@ -252,4 +289,25 @@ function navigateToCategory(direction: number) {
 
   return categoryNames[i + direction]
 }
+
+function addToField(field: any, value: number) {
+  if (!field.value) {
+    field.value = 0
+  }
+
+  field.value += value
+}
 </script>
+
+<style>
+.input-no-arrow-wk::-webkit-outer-spin-button,
+.input-no-arrow-wk::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-no-arrow-moz {
+  appearance: textfield;
+  -moz-appearance: textfield;
+}
+</style>

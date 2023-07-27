@@ -635,7 +635,7 @@ const localisation = {
       en: '',
     },
     pebCO2Emission: {
-      fr: 'PEB - Émission de CO2',
+      fr: 'PEB – Émission de CO2',
       nl: '',
       de: '',
       en: '',
@@ -684,6 +684,18 @@ const localisation = {
     },
     contactCallingTime: {
       fr: "Heures d'appel",
+      nl: '',
+      de: '',
+      en: '',
+    },
+    kwhm2: {
+      fr: 'kWh/m²',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    kwhyear: {
+      fr: 'kWh/an',
       nl: '',
       de: '',
       en: '',

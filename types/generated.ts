@@ -93,3 +93,25 @@ export interface Photo {
     ad: Ad,
     adId: number,
 }
+
+export interface CreateAdCategory {
+    id: number,
+    name: string,
+    fields: CreateAdField[],
+}
+
+export interface CreateAdField {
+    id: number,
+    title?: string,
+    type: string,
+    slider: boolean,
+    value?: string,
+    required: boolean,
+    options?: string,
+    unit?: string,
+    isHidden: boolean,
+    hideConditionTitle?: string,
+    hideConditionValue?: string,
+    CreateAdCategory: CreateAdCategory,
+    createAdCategoryId: number,
+}

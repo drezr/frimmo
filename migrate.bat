@@ -7,6 +7,6 @@ call npx prisma migrate resolve --applied %ts%
 call npx prisma db push
 call npx prisma generate
 
-call npx @kalissaac/prisma-typegen .\types\generated.ts .\prisma\schema.prisma
+call npx @kalissaac/prisma-typegen ./types/generated.ts ./prisma/schema.prisma
 
 powershell -command "(Get-Content .\types\generated.ts) -Replace 'export ', '' | Select-Object -Skip 6 | Set-Content .\types\index.ts"
