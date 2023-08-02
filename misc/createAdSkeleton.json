@@ -255,6 +255,15 @@
         "unit":""
       },
       {
+        "title": "floorArea",
+        "type": "number",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":"squareMeter"
+      },
+      {
         "title": "roomCount",
         "type": "number",
         "slider": true,
@@ -270,7 +279,20 @@
         "value": 0,
         "required": false,
         "options": [],
-        "unit":""
+        "unit":"",
+        "child":"bedroomAreas"
+      },
+      {
+        "title": "bedroomAreas",
+        "type": "split",
+        "slider": false,
+        "value": [],
+        "required": false,
+        "options": [],
+        "unit":"squareMeter",
+        "isHidden": true,
+        "hideConditionTitle": "bedroomCount",
+        "hideConditionValue": true
       },
       {
         "title": "bathroomCount",
@@ -279,7 +301,20 @@
         "value": 0,
         "required": false,
         "options": [],
-        "unit":""
+        "unit":"",
+        "child":"bathroomAreas"
+      },
+      {
+        "title": "bathroomAreas",
+        "type": "split",
+        "slider": false,
+        "value": [],
+        "required": false,
+        "options": [],
+        "unit":"squareMeter",
+        "isHidden": true,
+        "hideConditionTitle": "bathroomCount",
+        "hideConditionValue": true
       },
       {
         "title": "showerroomCount",
@@ -288,7 +323,20 @@
         "value": 0,
         "required": false,
         "options": [],
-        "unit":""
+        "unit":"",
+        "child":"showerroomCount"
+      },
+      {
+        "title": "showerroomAreas",
+        "type": "split",
+        "slider": false,
+        "value": [],
+        "required": false,
+        "options": [],
+        "unit":"squareMeter",
+        "isHidden": true,
+        "hideConditionTitle": "showerroomCount",
+        "hideConditionValue": true
       },
       {
         "title": "toiletCount",
@@ -297,7 +345,20 @@
         "value": 0,
         "required": false,
         "options": [],
-        "unit":""
+        "unit":"",
+        "child":"toiletAreas"
+      },
+      {
+        "title": "toiletAreas",
+        "type": "split",
+        "slider": false,
+        "value": [],
+        "required": false,
+        "options": [],
+        "unit":"squareMeter",
+        "isHidden": true,
+        "hideConditionTitle": "toiletCount",
+        "hideConditionValue": true
       },
       {
         "title": "",
@@ -307,15 +368,6 @@
         "required": false,
         "options": [],
         "unit":""
-      },
-      {
-        "title": "floorArea",
-        "type": "number",
-        "slider": false,
-        "value": "",
-        "required": false,
-        "options": [],
-        "unit":"squareMeter"
       },
       {
         "title": "hasKitchen",

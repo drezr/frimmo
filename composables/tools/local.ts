@@ -370,20 +370,20 @@ const localisation = {
       de: '',
       en: '',
     },
+    roomCount: {
+      fr: 'Nombre de pièces',
+      nl: '',
+      de: '',
+      en: '',
+    },
     bedroomCount: {
       fr: 'Nombre de chambres',
       nl: '',
       de: '',
       en: '',
     },
-    bedroomArea: {
+    bedroomAreas: {
       fr: 'Surface de la chambre',
-      nl: '',
-      de: '',
-      en: '',
-    },
-    roomCount: {
-      fr: 'Nombre de pièces',
       nl: '',
       de: '',
       en: '',
@@ -394,14 +394,32 @@ const localisation = {
       de: '',
       en: '',
     },
+    bathroomAreas: {
+      fr: 'Surface de la salle de bain',
+      nl: '',
+      de: '',
+      en: '',
+    },
     showerroomCount: {
       fr: 'Nombre de salles de douches',
       nl: '',
       de: '',
       en: '',
     },
+    showerroomAreas: {
+      fr: 'Surface de la salle de douche',
+      nl: '',
+      de: '',
+      en: '',
+    },
     toiletCount: {
       fr: 'Nombre de toilettes',
+      nl: '',
+      de: '',
+      en: '',
+    },
+    toiletAreas: {
+      fr: 'Surface de la toilette',
       nl: '',
       de: '',
       en: '',

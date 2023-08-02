@@ -109,6 +109,53 @@
 
           <div
             v-if="
+              field.type == 'split' &&
+              (!field.isHidden ||
+                getHideCondition(
+                  category,
+                  field.hideConditionTitle,
+                  field.hideConditionValue,
+                ))
+            "
+            class="mb-9 flex flex-col items-center"
+          >
+            <div v-for="i in getSplitValue(category, field.hideConditionTitle)">
+              <label
+                class="block mb-1 font-bold text-gray-700"
+                :for="field.title"
+              >
+                {{ _local(['ad', field.title]) }} {{ i }}
+
+                <span
+                  v-if="!field.required"
+                  class="text-sm text-gray-500 font-normal"
+                >
+                  ({{ _local(['common', 'optional']) }})
+                </span>
+              </label>
+
+              <div class="flex items-center w-80 mb-3">
+                <input
+                  v-if="typeof field.value == 'object'"
+                  :name="field.title"
+                  :id="field.title"
+                  type="number"
+                  v-model="field.value[i]"
+                  class="rounded w-full"
+                />
+
+                <div
+                  v-if="field.unit"
+                  class="ml-3 border border-gray-400 rounded px-3 py-2"
+                >
+                  {{ _local(['ad', field.unit]) }}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div
+            v-if="
               field.type == 'number' &&
               (!field.isHidden ||
                 getHideCondition(
@@ -298,6 +345,7 @@
           <div
             class="cursor-pointer border bg-blue-600 hover:bg-blue-500 text-white rounded px-3 py-2"
             v-if="i == categories.length - 1"
+            @click="createAd()"
           >
             <ClientOnly>
               <icon icon="check" size="lg" class="mr-3" />
@@ -314,7 +362,8 @@
 <script setup lang="ts">
 import createAdSkeleton from '@/misc/createAdSkeleton.json'
 
-const selectedCategory = ref('general')
+// const selectedCategory = ref('general')
+const selectedCategory = ref('composition')
 
 const categoryNames = createAdSkeleton.map((x) => x.name)
 
@@ -329,7 +378,21 @@ function getHideCondition(
     (f: any) => f.title == hideConditionTitle,
   )
 
+  if (!isNaN(hideConditionField?.value)) {
+    if (hideConditionField?.value > 0) {
+      if (hideConditionValue) return true
+    }
+  }
+
   return hideConditionField?.value == hideConditionValue
+}
+
+function getSplitValue(category: any, hideConditionTitle: any) {
+  const hideConditionField = category.fields.find(
+    (f: any) => f.title == hideConditionTitle,
+  )
+
+  return hideConditionField?.value
 }
 
 function navigateToCategory(direction: number) {
@@ -344,6 +407,46 @@ function addToField(field: any, value: number) {
   if (field.value < 0) {
     field.value = 0
   }
+
+  for (const cat of createAdSkeleton) {
+    for (let f of cat.fields) {
+      if (f.title == field.child) {
+        if (typeof f.value == 'object') {
+          if (value == -1) {
+            f.value.pop()
+          } else if (value == 1) {
+            //@ts-ignore
+            f.value.push('')
+          }
+        }
+
+        break
+      }
+    }
+  }
+}
+
+async function createAd() {
+  let copy = JSON.parse(JSON.stringify(categories.value))
+
+  for (const cat of copy) {
+    for (let field of cat.fields) {
+      if (field.type == 'split' && typeof field.value == 'object') {
+        if (field.value.length > 1) {
+          for (const item of field.value) {
+            if (item) {
+              field.value.shift()
+              break
+            }
+          }
+        }
+
+        field.value = field.value.join('###')
+      }
+    }
+  }
+
+  console.log(copy)
 }
 </script>
 

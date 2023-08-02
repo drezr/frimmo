@@ -39,12 +39,15 @@ model Ad {
   propertyState            String?
   hasGasWaterElectricity   Boolean @default(false)
   hasSewerConnection       Boolean @default(false)
+  roomCount                Int?
   bedroomCount             Int?
   bedroomAreas             String?
-  roomCount                Int?
   bathroomCount            Int?
+  bathroomAreas            String?
   showerroomCount          Int?
+  showerroomAreas          String?
   toiletCount              Int?
+  toiletAreas              String?
   hasKitchen               Boolean @default(false)
   kitchenArea              Int?
   hasLivingroom            Boolean @default(false)
