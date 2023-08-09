@@ -20,6 +20,23 @@
   </div>
 
   <form>
+    <div
+      :class="{ hidden: selectedCategory != 'photos' }"
+      class="flex justify-center"
+    >
+      <ClientOnly>
+        <div class="mt-6 pb-6 w-96">
+          <file-pond
+            ref="pond"
+            allow-multiple="true"
+            allow-reorder="true"
+            accepted-file-types="image/jpeg, image/png"
+            :label-idle="_local(['ad', 'dropPhotosHere'])"
+          />
+        </div>
+      </ClientOnly>
+    </div>
+
     <div v-for="(category, i) in categories" class="flex justify-center">
       <div v-if="category.name == selectedCategory">
         <div v-for="(field, i) in category.fields" class="mb-5">
@@ -228,6 +245,8 @@
             </div>
           </div>
 
+          <div v-if="field.type == 'photos'" class="w-96"></div>
+
           <div
             v-if="
               field.type == 'textarea' &&
@@ -360,14 +379,27 @@
 </template>
 
 <script setup lang="ts">
+import vueFilePond from 'vue-filepond'
+import 'filepond/dist/filepond.min.css'
+import 'filepond-plugin-image-preview/dist/filepond-plugin-image-preview.min.css'
+import FilePondPluginFileValidateType from 'filepond-plugin-file-validate-type'
+import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
+
 import createAdSkeleton from '@/misc/createAdSkeleton.json'
 
+const FilePond = vueFilePond(
+  FilePondPluginFileValidateType,
+  FilePondPluginImagePreview,
+)
+
 // const selectedCategory = ref('general')
-const selectedCategory = ref('composition')
+const selectedCategory = ref('photos')
 
 const categoryNames = createAdSkeleton.map((x) => x.name)
 
 const categories = ref(createAdSkeleton)
+
+const pond = ref(null)
 
 function getHideCondition(
   category: any,
@@ -447,6 +479,9 @@ async function createAd() {
   }
 
   console.log(copy)
+
+  //@ts-ignore
+  console.log(pond.value.getFiles())
 }
 </script>
 
@@ -460,5 +495,36 @@ async function createAd() {
 .input-no-arrow-moz {
   appearance: textfield;
   -moz-appearance: textfield;
+}
+
+.filepond--credits {
+  display: none;
+}
+
+.filepond--drop-label {
+  background-color: white;
+  border-radius: 5px;
+  border: 4px grey dashed;
+  height: 150px;
+  cursor: pointer;
+}
+
+.filepond--drop-label:hover {
+  background-color: rgb(243, 243, 243);
+}
+
+.filepond--drop-label > label {
+  cursor: pointer;
+}
+
+.filepond--list {
+  margin-top: 20px !important;
+}
+
+.filepond--panel-root,
+.filepond--panel-top,
+.filepond--panel-center,
+.filepond--panel-bottom {
+  background-color: transparent !important;
 }
 </style>

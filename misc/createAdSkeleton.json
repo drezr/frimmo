@@ -162,7 +162,7 @@
     "fields": [
       {
         "title": "photos",
-        "type": "text",
+        "type": "photos",
         "slider": false,
         "value": "",
         "required": false,

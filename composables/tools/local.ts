@@ -802,6 +802,12 @@ const localisation = {
       de: '',
       en: '',
     },
+    dropPhotosHere: {
+      fr: 'Glissez/déposez vos photos dans ce cadre ou cliquez ici pour les sélectionner sur votre ordinateur.',
+      nl: '',
+      de: '',
+      en: '',
+    },
   },
 
   errors: {
