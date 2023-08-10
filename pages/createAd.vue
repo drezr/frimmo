@@ -113,6 +113,7 @@
                 :type="field.type"
                 v-model="field.value"
                 class="rounded w-full"
+                :ref="field.title == 'address' ? 'addressinput' : ''"
               />
 
               <div
@@ -387,13 +388,33 @@ import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
 
 import createAdSkeleton from '@/misc/createAdSkeleton.json'
 
+const config = useRuntimeConfig()
+
+const addressinput = ref(null)
+
+useHead({
+  script: [
+    {
+      src: `https://maps.googleapis.com/maps/api/js?key=${config.public.GOOGLE_API_KEY}&libraries=places&callback=Function.prototype`,
+    },
+  ],
+})
+
+onMounted(() => {
+  //@ts-ignore
+  new google.maps.places.Autocomplete(addressinput.value[0], {
+    fields: ['formatted_address'],
+    strictBounds: false,
+    componentRestrictions: { country: 'be' },
+  })
+})
+
 const FilePond = vueFilePond(
   FilePondPluginFileValidateType,
   FilePondPluginImagePreview,
 )
 
-// const selectedCategory = ref('general')
-const selectedCategory = ref('photos')
+const selectedCategory = ref('general')
 
 const categoryNames = createAdSkeleton.map((x) => x.name)
 
