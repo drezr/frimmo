@@ -110,7 +110,7 @@
               <input
                 :name="field.title"
                 :id="field.title"
-                :type="field.type"
+                :type="field.title == 'availabilityDate' ? 'date' : field.type"
                 v-model="field.value"
                 class="rounded w-full"
                 :ref="field.title == 'address' ? 'addressinput' : ''"
@@ -388,17 +388,7 @@ import FilePondPluginImagePreview from 'filepond-plugin-image-preview'
 
 import createAdSkeleton from '@/misc/createAdSkeleton.json'
 
-const config = useRuntimeConfig()
-
 const addressinput = ref(null)
-
-useHead({
-  script: [
-    {
-      src: `https://maps.googleapis.com/maps/api/js?key=${config.public.GOOGLE_API_KEY}&libraries=places&callback=Function.prototype`,
-    },
-  ],
-})
 
 onMounted(() => {
   //@ts-ignore
