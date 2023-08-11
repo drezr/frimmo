@@ -998,6 +998,15 @@
         "unit":""
       },
       {
+        "title": "hasElectricityCertificate",
+        "type": "checkbox",
+        "slider": false,
+        "value": "",
+        "required": false,
+        "options": [],
+        "unit":""
+      },
+      {
         "title": "floodZone",
         "type": "checkbox",
         "slider": false,

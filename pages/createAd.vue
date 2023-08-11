@@ -392,10 +392,26 @@ const addressinput = ref(null)
 
 onMounted(() => {
   //@ts-ignore
-  new google.maps.places.Autocomplete(addressinput.value[0], {
-    fields: ['formatted_address'],
-    strictBounds: false,
-    componentRestrictions: { country: 'be' },
+  const autocomplete = new google.maps.places.Autocomplete(
+    //@ts-ignore
+    addressinput.value[0],
+    {
+      fields: ['formatted_address'],
+      strictBounds: false,
+      componentRestrictions: { country: 'be' },
+    },
+  )
+
+  autocomplete.setFields(['name'])
+
+  autocomplete.addListener('place_changed', function () {
+    var place = autocomplete.getPlace()
+
+    const cat = categories.value.find((c: any) => c.name == 'general')
+    //@ts-ignore
+    const addressField = cat?.fields.find((f: any) => f.title == 'address')
+
+    addressField.value = place.formatted_address
   })
 })
 
@@ -439,6 +455,12 @@ function getSplitValue(category: any, hideConditionTitle: any) {
 }
 
 function navigateToCategory(direction: number) {
+  setTimeout(() => {
+    document
+      .getElementsByTagName('html')[0]
+      .scrollTo({ top: 0, behavior: 'smooth' })
+  }, 10)
+
   const i = categoryNames.indexOf(selectedCategory.value)
 
   return categoryNames[i + direction]

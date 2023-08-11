@@ -706,6 +706,12 @@ const localisation = {
       de: '',
       en: '',
     },
+    hasElectricityCertificate: {
+      fr: 'Certificat de conformité électrique',
+      nl: '',
+      de: '',
+      en: '',
+    },
     floodZone: {
       fr: 'Zones inondables',
       nl: '',
